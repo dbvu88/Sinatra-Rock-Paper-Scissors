@@ -1,0 +1,24 @@
+<h1>Rock Paper Scissors</h1>
+<p> <%=@message%></p>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Human:</td><td><%=@player_score%></td></tr>
+    <tr><td>Computer:</td><td><%=@computer_score%></td></tr>
+  </tbody>
+</table>
+<form action="/play" method="post">
+  <div class="MMORPS">
+    <h2>CHOOSE</h2>
+    <button type="submit" name="choice" value="rock">rock</button>
+    <button type="submit" name="choice" value="paper">paper</button>
+    <button type="submit" name="choice" value="scissors">scissors</button>
+  </div>
+</form>
+
+<a href="/reset" >Start Over</a>
